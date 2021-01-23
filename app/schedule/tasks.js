@@ -14,7 +14,8 @@ class Tasks extends Subscription {
 
     const taskList = getAllAssignTaskList();
     console.log('taskList', taskList);
-    const res = await ctx.curl('https://oapi.dingtalk.com/robot/send?access_token=4dd7bf9c236b3fc9f5d40c785b165e217ab95e2d13bb0a612c1213d2556774ba', {
+
+    const res = await ctx.curl(process.env.webhookKey, {
       // dataType: 'json',
       method: 'POST',
       headers: {

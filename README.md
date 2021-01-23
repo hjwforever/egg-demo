@@ -1,4 +1,4 @@
-# 黄俊雯 Egg.js 实践作业
+# 黄俊雯 Egg.js 实践
 
 - qq 邮箱发送邮件
 - controller/tasks 中指派员工任务， 并发送邮件

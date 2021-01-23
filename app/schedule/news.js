@@ -1,7 +1,6 @@
 // eslint-disable-next-line strict
 const Subscription = require('egg').Subscription;
 
-// https://oapi.dingtalk.com/robot/send?access_token=4dd7bf9c236b3fc9f5d40c785b165e217ab95e2d13bb0a612c1213d2556774ba
 class News extends Subscription {
   // 通过 schedule 属性来设置定时任务的执行间隔等配置
   static get schedule() {
@@ -54,7 +53,7 @@ class News extends Subscription {
     //   },
     // ];
 
-    const res = await ctx.curl('https://oapi.dingtalk.com/robot/send?access_token=4dd7bf9c236b3fc9f5d40c785b165e217ab95e2d13bb0a612c1213d2556774ba', {
+    const res = await ctx.curl(process.env.webhookKey, {
       // dataType: 'json',
       method: 'POST',
       headers: {
